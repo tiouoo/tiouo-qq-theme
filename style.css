@@ -240,7 +240,6 @@ body[window-name="RegisterWindow"] .window-control-area {
 body:not([window-name]) > #app {
 }
 
-
 body#login .window-control-area {
   margin-top: 0px !important;
   margin-right: 0px !important;
@@ -399,7 +398,6 @@ body#login .remove-icon {
 }
 .group-box {
   padding-left: 8px;
-  width: 172px !important;
 }
 .group-box__container {
   margin-top: 40px;
@@ -411,7 +409,6 @@ body#login .remove-icon {
 .group-member {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.35);
-  border-right: none !important;
   border-radius: 16px !important;
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
@@ -597,10 +594,9 @@ body#login .remove-icon {
   position: relative;
   top: 1px;
 }
-.resize-handler{
+.resize-handler {
   opacity: 0 !important;
 }
-
 
 body[window-name="ImageViewerWindow"] .main-area__content,
 body[window-name="ImageViewerWindow"] .main-area__image-rotate-wrap {
@@ -627,7 +623,9 @@ body[window-name="ImageViewerWindow"] .window-control-area {
   transition: opacity 0.2s ease;
 }
 
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn {
   width: 24px !important;
   height: 24px !important;
   border-radius: 18px !important;
@@ -635,7 +633,9 @@ body[window-name="ImageViewerWindow"] .window-control-area .window-control-area_
   position: relative !important;
   color: #fff !important;
 }
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -655,10 +655,14 @@ body[window-name="ImageViewerWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn:hover {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn:hover {
   background-color: rgba(255, 255, 255, 0.12) !important;
 }
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn.close:hover {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn.close:hover {
   background-color: rgba(224, 66, 66, 0.6) !important;
 }
 
@@ -711,10 +715,11 @@ body[window-name="ImageViewerWindow"] #drag-area .draggable-view {
   left: 0 !important;
 }
 
-body[window-name="ImageViewerWindow"] #main-area-wrap{
-      height: 100% !important;
-    margin-top: -28px !important;
-}body[window-name="ImageViewerWindow"]
+body[window-name="ImageViewerWindow"] #main-area-wrap {
+  height: 100% !important;
+  margin-top: -28px !important;
+}
+body[window-name="ImageViewerWindow"]
   .window-control-area
   .window-control-area__btn:nth-child(1)::before,
 body[window-name="ImageViewerWindow"]
@@ -787,9 +792,8 @@ body[window-name="ImageViewerWindow"] .main-area__left {
 }
 body[window-name="ImageViewerWindow"] .main-area__right {
   left: calc(100% - 36px) !important;
-  border-radius: 0 18px 18px 0 !important; 
-   border-left: none !important;
-
+  border-radius: 0 18px 18px 0 !important;
+  border-left: none !important;
 }
 body[window-name="ImageViewerWindow"] .main-area__left,
 body[window-name="ImageViewerWindow"] .main-area__right {
@@ -800,9 +804,8 @@ body[window-name="ImageViewerWindow"] .main-area__arrow-icon {
   height: 25px !important;
   margin: 0 !important;
   background: transparent !important;
-  opacity: 1 !important; 
+  opacity: 1 !important;
   border-radius: 0 !important;
-
 }
 body[window-name="ImageViewerWindow"] .main-area__left .main-area__arrow-icon {
   position: relative;
@@ -817,18 +820,22 @@ body[window-name="ImageViewerWindow"] .main-area__arrow-icon .q-svg-icon {
   height: 16px !important;
 }
 
-body[window-name="ImageViewerWindow"] .main-area__left-icon{
+body[window-name="ImageViewerWindow"] .main-area__left-icon {
   position: relative;
   top: -9px;
   right: 1px;
 }
-body[window-name="ImageViewerWindow"] .main-area__right-icon{
+body[window-name="ImageViewerWindow"] .main-area__right-icon {
   position: relative;
   top: -9px;
   left: -4px;
 }
 
-body[window-name="ImageViewerWindow"] .draggable-view__container{
-  background: transparent !important;    backdrop-filter: blur(0px) !important;
+body[window-name="ImageViewerWindow"] .draggable-view__container {
+  background: transparent !important;
+  backdrop-filter: blur(0px) !important;
+}
 
+.message-panel {
+  background: transparent !important;
 }
