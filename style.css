@@ -40,7 +40,9 @@ body[window-name="MainWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="MainWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="MainWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -68,7 +70,9 @@ body[window-name="SettingWindow"] .narrow-toggler {
   display: none !important;
 }
 /* 窗口控制按钮图标 - SettingWindow */
-body[window-name="SettingWindow"] .window-control-area .window-control-area__btn {
+body[window-name="SettingWindow"]
+  .window-control-area
+  .window-control-area__btn {
   position: relative !important;
   background-image: none !important;
 }
@@ -82,7 +86,9 @@ body[window-name="SettingWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="SettingWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="SettingWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -110,7 +116,9 @@ body[window-name="MsgRecordWindow"] .narrow-toggler {
   display: none !important;
 }
 /* 窗口控制按钮图标 - MsgRecordWindow */
-body[window-name="MsgRecordWindow"] .window-control-area .window-control-area__btn {
+body[window-name="MsgRecordWindow"]
+  .window-control-area
+  .window-control-area__btn {
   position: relative !important;
   background-image: none !important;
 }
@@ -124,7 +132,9 @@ body[window-name="MsgRecordWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="MsgRecordWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="MsgRecordWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -188,7 +198,9 @@ body[window-name="RegisterWindow"] .narrow-toggler {
   display: none !important;
 }
 /* 窗口控制按钮图标 - RegisterWindow */
-body[window-name="RegisterWindow"] .window-control-area .window-control-area__btn {
+body[window-name="RegisterWindow"]
+  .window-control-area
+  .window-control-area__btn {
   position: relative !important;
   background-image: none !important;
 }
@@ -202,7 +214,9 @@ body[window-name="RegisterWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="RegisterWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="RegisterWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -230,7 +244,9 @@ body[window-name="ImageViewerWindow"] .narrow-toggler {
   display: none !important;
 }
 /* 窗口控制按钮图标 - ImageViewerWindow */
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn {
   position: relative !important;
   background-image: none !important;
 }
@@ -244,7 +260,9 @@ body[window-name="ImageViewerWindow"]
   .q-svg-icon {
   display: none !important;
 }
-body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn::before {
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
@@ -1050,7 +1068,142 @@ body[window-name="ImageViewerWindow"] .draggable-view__container {
   background: transparent !important;
 }
 
-/* ===== 暗色模式适配 ===== */
+/* ===== 群文件窗口 ===== */
+/* 标题栏 */
+body[window-name="GroupFileWindow"] .top-bar {
+  margin: 10px !important;
+  margin-bottom: 0 !important;
+  align-items: center !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+body[window-name="GroupFileWindow"] .top-bar .logo .title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text_primary) !important;
+}
+body[window-name="GroupFileWindow"] .window-control-area {
+  margin-right: 4px !important;
+  column-gap: 1px !important;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 8px !important;
+}
+/* 窗口控制按钮图标 */
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn.close:hover {
+  background-color: rgba(224, 66, 66, 0.6) !important;
+}
+/* 最小化 */
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(2)::before,
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(2):hover::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 13H5a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 13H5a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+/* 最大化 */
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(3)::before,
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(3):hover::before {
+  width: 14px !important;
+  height: 14px !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+/* 关闭 */
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(4)::before,
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(4):hover::before {
+  width: 20px !important;
+  height: 19px !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+body[window-name="GroupFileWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(4):hover::before {
+  background-color: #ffffff !important;
+}
+
+/* 内容区圆角玻璃卡片 */
+body[window-name="GroupFileWindow"] .main-content {
+  margin: 10px !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+body[window-name="GroupFileWindow"] #file-area-container .header {
+  background: transparent !important;
+}
+body[window-name="GroupFileWindow"] .q-pulldown-menu-button {
+  border-radius: 10px !important;
+}
+
+body[q-theme="dark"][window-name="GroupFileWindow"] .top-bar,
+body[q-theme="dark"][window-name="GroupFileWindow"] .main-content {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 body[q-theme="dark"] .topbar,
 body[q-theme="dark"] .two-col-layout__aside,
 body[q-theme="dark"] .sidebar,
@@ -1085,4 +1238,64 @@ body[q-theme="dark"] .chat-msg-area__tip--top-btn {
 
 body[q-theme="dark"] .window-control-area .window-control-area__btn {
   color: var(--text_primary) !important;
+}
+
+body[window-name="GroupFileWindow"] .content-wrapper {
+  background: transparent !important;
+}
+body[window-name="GroupFileWindow"] .main-content {
+  margin-top: 20px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+body[window-name="GroupFileWindow"] .content-wrapper {
+  margin-bottom: 10px !important;
+  border-radius: 16px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+body[window-name="GroupFileWindow"] .file-list-normal-sort-title {
+  margin: 10px;
+  border-radius: 14px;
+  margin-top: 0;
+}
+body[window-name="GroupFileWindow"] .file-list-header-container-pull-down {
+  position: absolute;
+  top: -40px !important;
+  right: 110px !important;
+}
+body[window-name="GroupFileWindow"] .search-bar {
+  margin-right: 10px;
+}
+body[window-name="GroupFileWindow"] .file-list-normal-scroll {
+  padding-top: 10px;
+}
+body[window-name="GroupFileWindow"] .file-list-normal-sort-title-inner {
+  padding-left: 20px;
+  font-size: 13px;
+  margin-top: -1px;
+}
+
+body[window-name="GroupFileWindow"] .file-container {
+  border-radius: 16px;
+  margin: 0 6px;
+}
+body[window-name="GroupFileWindow"] .loadmore-placeholder {
+  background: transparent !important;
+}
+body[window-name="GroupFileWindow"] .file-area-container-group-file-footer {
+  margin-bottom: 22px;
+}
+
+.side-panel {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: none !important;
+  opacity: 1;
+  margin-top: -10px !important;
+  margin-right: -6px !important;
+    height: calc(100% - 42px) !important;
 }
