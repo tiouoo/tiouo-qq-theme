@@ -21,7 +21,35 @@ function overrideInline() {
     return done;
 }
 
-const observer = new MutationObserver(() => overrideInline());
+function syncInputAreaHeight() {
+    const target = document.querySelector(".chat-input-area");
+    if (!target) {
+        return false;
+    }
+    if (!target._heightObserver) {
+        const observer = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                document.documentElement.style.setProperty(
+                    "--chat-input-area-height",
+                    `${entry.contentRect.height + 10}px`
+                );
+            }
+        });
+        observer.observe(target);
+        target._heightObserver = observer;
+        document.documentElement.style.setProperty(
+            "--chat-input-area-height",
+            `${target.getBoundingClientRect().height + 10}px`
+        );
+    }
+    return true;
+}
+
+const observer = new MutationObserver(() => {
+    overrideInline();
+    syncInputAreaHeight();
+});
 observer.observe(document.documentElement, { childList: true, subtree: true });
 overrideInline();
+syncInputAreaHeight();
 onLoad();

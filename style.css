@@ -543,7 +543,7 @@ body#login .remove-icon {
   margin-top: -10px;
 }
 .ml-list {
-  margin-bottom: 150px;
+  margin-bottom: var(--chat-input-area-height, 150px);
 }
 .radio-tab {
   border-radius: 12px;
