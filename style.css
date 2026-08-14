@@ -169,7 +169,6 @@
   background-color: transparent !important;
 }
 .recent-contact-item {
-  margin: 4px !important;
   .item__content {
     background: transparent !important;
   }
@@ -181,9 +180,9 @@
   padding: 12px 10px !important;
   padding-bottom: 5px !important;
 }
-.recent-contact{
-  padding: 0 4px !important;
-  width: calc(100% - 8px) !important;
+.two-col-layout__aside{
+  /* padding: 0 4px !important; */
+  /* width: calc(100% - 8px) !important; */
 }
 .two-col-layout__aside {
   overflow: hidden !important;
@@ -209,3 +208,61 @@
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 }
+
+.aio {
+  position: relative !important;
+}
+.group-panel,
+.group-chat {
+  height: 100% !important;
+}
+.group-chat {
+  position: relative !important;
+}
+.chat-msg-area {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+.chat-header,
+.chat-header .background-mask,
+.chat-header .texture-background {
+  background: transparent !important;
+}
+.chat-header {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  right: 10px !important;
+  height: 52px !important;
+  z-index: 50 !important;
+  border-radius: 14px !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 6px 24px rgba(31, 35, 40, 0.1) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto !important;
+}
+
+/* 输入框悬浮 */
+.chat-input-area {
+  position: absolute !important;
+  left: 10px !important;
+  right: 10px !important;
+  bottom: 10px !important;
+  z-index: 50 !important;
+  border-radius: 14px !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 6px 24px rgba(31, 35, 40, 0.1) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto !important;
+}
+
+
