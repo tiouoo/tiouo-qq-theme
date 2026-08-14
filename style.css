@@ -183,6 +183,10 @@ body[window-name="RegisterWindow"] .window-control-area {
   margin-right: 12px !important;
 }
 
+body:not([window-name]) > #app {
+}
+
+
 body#login .window-control-area {
   margin-top: 0px !important;
   margin-right: 0px !important;
@@ -531,4 +535,7 @@ body#login .remove-icon {
 .chat-msg-area__tip--top-btn .content {
   position: relative;
   top: 1px;
+}
+.resize-handler{
+  opacity: 0 !important;
 }
