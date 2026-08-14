@@ -1,0 +1,25 @@
+{
+    "manifest_version": 4,
+    "type": "theme",
+    "name": "tiouo.qq.theme",
+    "slug": "tiouo.qq.theme",
+    "description": "tiouo.qq.theme",
+    "version": "0.0.1",
+    "icon": "./icon.png",
+    "authors": [
+        {
+            "name": "tiouoo",
+            "link": "https://github.com/tiouoo"
+        }
+    ],
+    "repository": {
+        "repo": "tiouoo/tiouo-qq-theme",
+        "branch": "main"
+    },
+    "platform": ["win32", "darwin", "linux"],
+    "injects": {
+        "renderer": "./renderer.js",
+        "main": "./main.js",
+        "preload": "./preload.js"
+    }
+}
