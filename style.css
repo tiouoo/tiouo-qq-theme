@@ -93,7 +93,7 @@
   display: none !important;
 }
 .qq-logo {
-  margin-left: 12px;
+  margin-left: 4px;
 }
 .qq-logo.topbar-logo {
   display: inline-flex !important;
@@ -103,18 +103,18 @@
 .qq-logo.topbar-logo::before {
   content: "" !important;
   display: block !important;
-  width: 18px !important;
+  /* width: 18px !important;
   height: 18px !important;
   flex-shrink: 0 !important;
   background-image: url("./assets/title-bar-logo.svg");
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: contain !important;
+  background-size: contain !important; */
 }
 .qq-logo.topbar-logo::after {
-  content: "QQ" !important;
+  content: "Tiouo" !important;
   font-size: 15px !important;
-  color: #333333 !important;
+  color: var(--text_primary) !important;
   line-height: 1 !important;
   text-shadow: 0 1px 2px rgba(31, 35, 40, 0.08);
 }
