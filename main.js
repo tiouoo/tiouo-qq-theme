@@ -13,6 +13,40 @@ function debounce(fn, time) {
     };
 }
 
+// 把 CSS 里 url("本地文件") 引用内联为 base64 data URI
+const assetCache = {};
+
+function loadAsset(filepath) {
+    const stat = fs.statSync(filepath);
+    const cached = assetCache[filepath];
+    if (cached && cached.mtimeMs === stat.mtimeMs) {
+        return cached.uri;
+    }
+    const data = fs.readFileSync(filepath);
+    const ext = path.extname(filepath).slice(1).toLowerCase();
+    const mime = {
+        svg: "image/svg+xml",
+        ttf: "font/ttf",
+        otf: "font/otf",
+        woff: "font/woff",
+        woff2: "font/woff2"
+    }[ext] || `image/${ext}`;
+    const uri = `data:${mime};base64,${data.toString("base64")}`;
+    assetCache[filepath] = { mtimeMs: stat.mtimeMs, uri };
+    return uri;
+}
+
+function inlineAssets(css) {
+    return css.replace(/url\("([^"]+)"\)/g, (match, file) => {
+        const filepath = path.join(__dirname, file.replace(/^\.\//, ""));
+        try {
+            return `url("${loadAsset(filepath)}")`;
+        } catch (e) {
+            return match;
+        }
+    });
+}
+
 // 更新样式
 function updateStyle(webContents) {
     const csspath = path.join(__dirname, "style.css");
@@ -20,16 +54,15 @@ function updateStyle(webContents) {
         if (err) {
             return;
         }
-        webContents.send("LiteLoader.custom_css.updateStyle", data);
+        webContents.send("LiteLoader.custom_css.updateStyle", inlineAssets(data));
     });
 }
 
-// 监听CSS修改-开发时候用的
+// 监听样式/资源修改-开发时候用的
 function watchCSSChange(webContents) {
-    const filepath = path.join(__dirname, "style.css");
     fs.watch(
-        filepath,
-        "utf-8",
+        __dirname,
+        { recursive: true },
         debounce(() => {
             updateStyle(webContents);
         }, 100)
