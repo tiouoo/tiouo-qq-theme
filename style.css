@@ -9,32 +9,242 @@
     "CustomFont", "Microsoft YaHei", "PingFang SC", sans-serif !important;
 }
 
-/* 标题栏 */
-.container-content {
+/* 标题栏 - MainWindow */
+body[window-name="MainWindow"] .container-content {
   margin: 10px !important;
   margin-top: 0 !important;
 }
-.window-control-area {
+body[window-name="MainWindow"] .window-control-area {
   margin-top: 11px;
   margin-right: 11px;
   column-gap: 1px;
 }
-.window-control-area__btn {
+body[window-name="MainWindow"] .window-control-area__btn {
   border-radius: 13px !important;
 }
-.narrow-toggler {
+body[window-name="MainWindow"] .narrow-toggler {
   display: none !important;
 }
-/* 窗口控制按钮图标 */
-.window-control-area .window-control-area__btn {
+/* 窗口控制按钮图标 - MainWindow */
+body[window-name="MainWindow"] .window-control-area .window-control-area__btn {
   position: relative !important;
   background-image: none !important;
 }
-.window-control-area .window-control-area__btn .q-svg-icon,
-.window-control-area .window-control-area__btn:hover .q-svg-icon {
+body[window-name="MainWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="MainWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
   display: none !important;
 }
-.window-control-area .window-control-area__btn::before {
+body[window-name="MainWindow"] .window-control-area .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+
+/* 标题栏 - SettingWindow */
+body[window-name="SettingWindow"] .container-content {
+  margin: 10px !important;
+  margin-top: 0 !important;
+}
+body[window-name="SettingWindow"] .window-control-area {
+  margin-top: 11px;
+  margin-right: 11px;
+  column-gap: 1px;
+}
+body[window-name="SettingWindow"] .window-control-area__btn {
+  border-radius: 13px !important;
+}
+body[window-name="SettingWindow"] .narrow-toggler {
+  display: none !important;
+}
+/* 窗口控制按钮图标 - SettingWindow */
+body[window-name="SettingWindow"] .window-control-area .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body[window-name="SettingWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="SettingWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="SettingWindow"] .window-control-area .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+
+/* 标题栏 - MsgRecordWindow */
+body[window-name="MsgRecordWindow"] .container-content {
+  margin: 10px !important;
+  margin-top: 0 !important;
+}
+body[window-name="MsgRecordWindow"] .window-control-area {
+  margin-top: 11px;
+  margin-right: 11px;
+  column-gap: 1px;
+}
+body[window-name="MsgRecordWindow"] .window-control-area__btn {
+  border-radius: 13px !important;
+}
+body[window-name="MsgRecordWindow"] .narrow-toggler {
+  display: none !important;
+}
+/* 窗口控制按钮图标 - MsgRecordWindow */
+body[window-name="MsgRecordWindow"] .window-control-area .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body[window-name="MsgRecordWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="MsgRecordWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="MsgRecordWindow"] .window-control-area .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+
+/* 标题栏 - Login */
+body#login .container-content {
+  margin: 10px !important;
+  margin-top: 0 !important;
+}
+body#login .window-control-area {
+  margin-top: 11px;
+  margin-right: 11px;
+  column-gap: 1px;
+}
+body#login .window-control-area__btn {
+  border-radius: 13px !important;
+}
+body#login .narrow-toggler {
+  display: none !important;
+}
+/* 窗口控制按钮图标 - Login */
+body#login .window-control-area .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body#login .window-control-area .window-control-area__btn .q-svg-icon,
+body#login .window-control-area .window-control-area__btn:hover .q-svg-icon {
+  display: none !important;
+}
+body#login .window-control-area .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+
+/* 标题栏 - RegisterWindow */
+body[window-name="RegisterWindow"] .container-content {
+  margin: 10px !important;
+  margin-top: 0 !important;
+}
+body[window-name="RegisterWindow"] .window-control-area {
+  margin-top: 11px;
+  margin-right: 11px;
+  column-gap: 1px;
+}
+body[window-name="RegisterWindow"] .window-control-area__btn {
+  border-radius: 13px !important;
+}
+body[window-name="RegisterWindow"] .narrow-toggler {
+  display: none !important;
+}
+/* 窗口控制按钮图标 - RegisterWindow */
+body[window-name="RegisterWindow"] .window-control-area .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body[window-name="RegisterWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="RegisterWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="RegisterWindow"] .window-control-area .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+
+/* 标题栏 - ImageViewerWindow */
+body[window-name="ImageViewerWindow"] .container-content {
+  margin: 10px !important;
+  margin-top: 0 !important;
+}
+body[window-name="ImageViewerWindow"] .window-control-area {
+  margin-top: 11px;
+  margin-right: 11px;
+  column-gap: 1px;
+}
+body[window-name="ImageViewerWindow"] .window-control-area__btn {
+  border-radius: 13px !important;
+}
+body[window-name="ImageViewerWindow"] .narrow-toggler {
+  display: none !important;
+}
+/* 窗口控制按钮图标 - ImageViewerWindow */
+body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn {
+  position: relative !important;
+  background-image: none !important;
+}
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="ImageViewerWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="ImageViewerWindow"] .window-control-area .window-control-area__btn::before {
   content: "" !important;
   position: absolute !important;
   top: 50% !important;
