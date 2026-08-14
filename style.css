@@ -93,7 +93,7 @@
   display: none !important;
 }
 .qq-logo {
-  margin-left: 4px;
+  margin-left: 12px;
 }
 .qq-logo.topbar-logo {
   display: inline-flex !important;
@@ -103,24 +103,23 @@
 .qq-logo.topbar-logo::before {
   content: "" !important;
   display: block !important;
-  /* width: 18px !important;
+  width: 18px !important;
   height: 18px !important;
   flex-shrink: 0 !important;
   background-image: url("./assets/title-bar-logo.svg");
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: contain !important; */
+  background-size: contain !important;
 }
 .qq-logo.topbar-logo::after {
-  content: "Tiouo" !important;
+  content: "QQ" !important;
   font-size: 15px !important;
   color: var(--text_primary) !important;
   line-height: 1 !important;
   text-shadow: 0 1px 2px rgba(31, 35, 40, 0.08);
 }
 
-.topbar,
-.sidebar {
+.topbar {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
@@ -133,9 +132,9 @@
 .topbar {
   margin: 10px;
 }
-.draggable-view__container {
+/* .draggable-view__container {
   margin-right: 10px;
-}
+} */
 .recent-contact {
   background: transparent;
 }
@@ -153,6 +152,12 @@
 .sidebar-wrapper .tab-item-mask {
   border-radius: 12px !important;
 }
+.sidebar-wrapper .icon-item {
+  --border-radius: 12px !important;
+}
+.recent-contact-item {
+  --itbr: 12px;
+}
 .more-item,
 .nav-item[aria-label="空间"] {
   display: none !important;
@@ -163,13 +168,41 @@
 .two-col-layout__aside > .resize-handler.ew > div:nth-child(2) {
   background-color: transparent !important;
 }
-
+.recent-contact-item {
+  margin: 4px !important;
+  .item__content {
+    background: transparent !important;
+  }
+}
+.sidebar-nav,.recent-contact{
+  background: transparent !important;
+}
+.contact-top-bar{
+  padding: 12px 10px !important;
+  padding-bottom: 5px !important;
+}
+.recent-contact{
+  padding: 0 4px !important;
+  width: calc(100% - 8px) !important;
+}
 .two-col-layout__aside {
-  margin-right: 10px !important;
   overflow: hidden !important;
   background-color: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  border-radius: 16px !important;
+  border-left: none !important;
+  border-radius: 0 16px 16px 0 !important;
+  box-shadow:
+    0 1px 2px rgba(31, 35, 40, 0.04),
+    0 4px 16px rgba(31, 35, 40, 0.06);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-right: none !important;
+  border-radius: 16px 0 0 16px !important;
   box-shadow:
     0 1px 2px rgba(31, 35, 40, 0.04),
     0 4px 16px rgba(31, 35, 40, 0.06);
