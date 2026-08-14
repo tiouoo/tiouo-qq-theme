@@ -186,7 +186,8 @@
   /* width: calc(100% - 8px) !important; */
 }
 .two-col-layout__aside {
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
+  z-index: 999999999999;
   background-color: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
   border-left: none !important;
@@ -254,7 +255,6 @@
   display: flex !important;
   align-items: center !important;
   padding: 0 8px !important;
-  padding-right: 2px !important;
   background-color: rgba(255, 255, 255, 0.35) !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
   border-radius: 16px !important;
