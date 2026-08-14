@@ -839,3 +839,40 @@ body[window-name="ImageViewerWindow"] .draggable-view__container {
 .message-panel {
   background: transparent !important;
 }
+
+/* ===== 暗色模式适配 ===== */
+body[q-theme="dark"] .topbar,
+body[q-theme="dark"] .two-col-layout__aside,
+body[q-theme="dark"] .sidebar,
+body[q-theme="dark"] .group-notice,
+body[q-theme="dark"] .group-member {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body[q-theme="dark"] .chat-header .chat-header__title,
+body[q-theme="dark"] .chat-header .panel-header__action {
+  background-color: rgba(22, 24, 28, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body[q-theme="dark"] .chat-input-area {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"] .chat-input-area::before {
+  background-color: rgba(22, 24, 28, 0.6);
+}
+
+body[q-theme="dark"] .sys-notify-card {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body[q-theme="dark"] .chat-msg-area__tip--top-btn {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body[q-theme="dark"] .window-control-area .window-control-area__btn {
+  color: var(--text_primary) !important;
+}
