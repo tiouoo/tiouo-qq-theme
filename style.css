@@ -462,11 +462,11 @@ body[window-name="CollectionWindow"]
   .window-control-area__btn {
   width: 24px !important;
   height: 24px !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
 }
 body[window-name="CollectionWindow"] .window-control-area {
-  margin-top: 6px !important;
-  margin-right: 6px !important;
+  margin-top: 14px !important;
+  margin-right: 16px !important;
 }
 
 body[window-name="MsgRecordWindow"]
@@ -1412,8 +1412,138 @@ body[window-name="GroupFileWindow"] .file-area-container-group-file-footer {
 }
 .group-user__content {
   border-radius: 12px !important;
-}.q-dialog-close{
+}
+.q-dialog-close {
   position: relative;
   top: 8px;
   right: 8px;
+}
+
+body[window-name="CollectionWindow"] .favorites-layout {
+  padding: 10px !important;
+}
+
+body[window-name="CollectionWindow"] .favorites-layout__left-area,
+body[window-name="CollectionWindow"] .favorites-layout__side {
+  height: 100% !important;
+}
+
+
+body[window-name="CollectionWindow"] .panel-header {
+  margin: 10px !important;
+  margin-bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 14px !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+}
+body[window-name="CollectionWindow"] .favorites-layout__left-area{
+  margin: 0px !important;
+  margin-bottom: 0 !important;
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 14px !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+}
+
+/* 分类列表 */
+body[window-name="CollectionWindow"] .favorites-layout__category-list {
+  padding: 6px !important;
+}
+body[window-name="CollectionWindow"] .favorites-layout__category-list-item {
+  border-radius: 10px !important;
+  margin-bottom: 2px !important;
+}
+body[window-name="CollectionWindow"]
+  .favorites-layout__category-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+body[window-name="CollectionWindow"]
+  .favorites-layout__category-list-item-active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* 新建笔记按钮 */
+body[window-name="CollectionWindow"] .favorites-layout__new-memo {
+  margin: 10px !important;
+}
+body[window-name="CollectionWindow"] .btn-new-memo {
+  width: 100% !important;
+  border-radius: 10px !important;
+}
+
+/* 右侧内容区 - 通透玻璃卡片 */
+body[window-name="CollectionWindow"] .favorites-layout__right-area {
+  height: 100% !important;
+}
+body[window-name="CollectionWindow"] .favorites-layout__content {
+  background-color: transparent !important;
+  overflow: hidden !important;
+}
+
+
+body[window-name="CollectionWindow"] .favorites-header .background-mask {
+  display: none !important;
+}
+
+/* 收藏列表项 */
+body[window-name="CollectionWindow"] .favorites-item {
+  border-radius: 12px !important;
+}
+body[window-name="CollectionWindow"] .favorites-item:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 窗口控制按钮 hover */
+body[window-name="CollectionWindow"]
+  .window-control-area
+  .window-control-area__btn:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+body[window-name="CollectionWindow"]
+  .window-control-area
+  .window-control-area__btn.close:hover {
+  background-color: rgba(224, 66, 66, 0.6) !important;
+}
+body[window-name="CollectionWindow"] .panel-header {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 32px;
+  margin-bottom: 10px !important;
+}
+body[window-name="CollectionWindow"] .panel-header__title {
+  margin-left: 10px !important;
+}
+body[window-name="CollectionWindow"] .favorites-layout__content {
+  margin-left: 10px !important;
+}
+
+/* 暗色主题 */
+body[q-theme="dark"][window-name="CollectionWindow"]
+  .favorites-layout__content {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="CollectionWindow"]
+  .favorites-layout__top-bar {
+  background-color: rgba(22, 24, 28, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="CollectionWindow"]
+  .favorites-layout__left-area {
+  background-color: rgba(22, 24, 28, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="CollectionWindow"]
+  .favorites-layout__category-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="CollectionWindow"]
+  .favorites-layout__category-list-item-active {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+body[q-theme="dark"][window-name="CollectionWindow"] .favorites-item:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
 }
