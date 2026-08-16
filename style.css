@@ -52,10 +52,9 @@ body[window-name="MainWindow"]
   height: 16px !important;
   background-color: currentColor;
 }
-body[window-name="MainWindow"]
-  .window-control-area__btn {
-    height: 28px !important;
-    width: 32px !important;
+body[window-name="MainWindow"] .window-control-area__btn {
+  height: 28px !important;
+  width: 32px !important;
 }
 
 /* 标题栏 - SettingWindow */
@@ -617,7 +616,7 @@ body#login .remove-icon {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-    color: var(--nt_brand_standard_2_overlay_hover_brand_2_mix) !important;
+  color: var(--nt_brand_standard_2_overlay_hover_brand_2_mix) !important;
   fill: var(--nt_brand_standard_2_overlay_hover_brand_2_mix) !important;
 }
 .qq-logo.topbar-logo::before {
@@ -626,7 +625,9 @@ body#login .remove-icon {
   width: 18px !important;
   height: 18px !important;
   flex-shrink: 0 !important;
-  background-color: var(--nt_brand_standard_2_overlay_hover_brand_2_mix) !important;
+  background-color: var(
+    --nt_brand_standard_2_overlay_hover_brand_2_mix
+  ) !important;
   -webkit-mask-image: url("./assets/title-bar-logo.svg") !important;
   mask-image: url("./assets/title-bar-logo.svg") !important;
   -webkit-mask-size: contain !important;
@@ -654,7 +655,7 @@ body#login .remove-icon {
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 }
-.topbar-content{
+.topbar-content {
   height: 34px !important;
 }
 .topbar {
@@ -924,9 +925,9 @@ body#login .remove-icon {
   right: -25px !important;
   z-index: 60 !important;
 }
-.chat-msg-area__tip--top svg ,
+.chat-msg-area__tip--top svg,
 .chat-msg-area__tip--top .content {
-color: #0099ff !important;
+  color: #0099ff !important;
 }
 .chat-msg-area__tip--top-btn {
   margin: 0 !important;
@@ -1459,7 +1460,6 @@ body[window-name="CollectionWindow"] .favorites-layout__side {
   height: 100% !important;
 }
 
-
 body[window-name="CollectionWindow"] .panel-header {
   margin: 10px !important;
   margin-bottom: 0 !important;
@@ -1469,12 +1469,19 @@ body[window-name="CollectionWindow"] .panel-header {
   backdrop-filter: blur(10px) saturate(160%);
   -webkit-backdrop-filter: blur(10px) saturate(160%);
   z-index: 99;
+  width: calc(100vw - 20px);
+  position: fixed;
+  left: 10px;
 }
 body[window-name="CollectionWindow"] .favorites-custom-group__title {
-font-size: 14px !important;
-margin-left: 2px !;
+  font-size: 14px !important;
+  margin-left: 2px !;
 }
-body[window-name="CollectionWindow"] .favorites-layout__left-area{
+body[window-name="CollectionWindow"] .favorites-layout__search-input {
+  margin-top: 8px !important;
+  margin-bottom: 2px !important;
+}
+body[window-name="CollectionWindow"] .favorites-layout__left-area {
   margin: 0px !important;
   margin-bottom: 0 !important;
   background-color: rgba(255, 255, 255, 0.35) !important;
@@ -1482,6 +1489,8 @@ body[window-name="CollectionWindow"] .favorites-layout__left-area{
   border-radius: 14px !important;
   backdrop-filter: blur(10px) saturate(160%);
   -webkit-backdrop-filter: blur(10px) saturate(160%);
+  margin-top: 42px !important;
+  height: calc(100% - 42px) !important;
 }
 
 /* 分类列表 */
@@ -1518,7 +1527,6 @@ body[window-name="CollectionWindow"] .favorites-layout__content {
   background-color: transparent !important;
   overflow: hidden !important;
 }
-
 
 body[window-name="CollectionWindow"] .favorites-header .background-mask {
   display: none !important;
@@ -1585,14 +1593,14 @@ body[q-theme="dark"][window-name="CollectionWindow"] .favorites-item:hover {
 }
 
 [window-name="SettingWindow"] .setting-tab,
-[window-name="SettingWindow"] .setting-main{
+[window-name="SettingWindow"] .setting-main {
   background: transparent !important;
 }
 
-.more-panel>.side-panel{
+.more-panel > .side-panel {
   background: transparent !important;
 }
-.more-panel>.side-panel>.panel-content{
+.more-panel > .side-panel > .panel-content {
   margin-bottom: 0 !important;
   background: rgba(255, 255, 255, 0.35) !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
@@ -1602,4 +1610,269 @@ body[q-theme="dark"][window-name="CollectionWindow"] .favorites-item:hover {
 }
 body[window-name="MainWindow"] .topbar {
   margin-bottom: 8px !important;
+}
+
+/* ===== 文件中心窗口 FileCenterWindow（悬浮样式） ===== */
+/* 窗口背景透明 */
+body[window-name="FileCenterWindow"] {
+  background: transparent !important;
+}
+
+/* 悬浮标题栏 - 玻璃卡片 */
+body[window-name="FileCenterWindow"] .top-bar {
+  margin: 10px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow:
+    0 1px 2px rgba(31, 35, 40, 0.04),
+    0 4px 16px rgba(31, 35, 40, 0.06);
+}
+body[window-name="FileCenterWindow"] .new-file-wrapper ,
+body[window-name="FileCenterWindow"] .nav-bar-wrapper {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: none;
+    margin-top: 12px;
+        height: calc(100% - 12px) !important;
+}
+body[window-name="FileCenterWindow"] .new-file-wrapper {
+  margin-left: 8px; width: calc(100% - 10px) !important;
+}
+body[window-name="FileCenterWindow"] .top-bar .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-left: 10px !important;
+  flex-shrink: 0 !important;
+}
+body[window-name="FileCenterWindow"] .top-bar .logo .title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text_primary) !important;
+}
+/* 搜索框 */
+body[window-name="FileCenterWindow"] .top-bar .title-bar {
+  flex: 1 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+body[window-name="FileCenterWindow"] .top-bar .search-wrapper {
+  width: 100% !important;
+}
+body[window-name="FileCenterWindow"] .q-search.file-center-search {
+  width: 100% !important;
+}
+body[window-name="FileCenterWindow"] .q-search__input {
+  border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+body[window-name="FileCenterWindow"] .top-bar .action-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  flex-shrink: 0 !important;
+  color: var(--text_primary) !important;
+  cursor: pointer;
+}
+body[window-name="FileCenterWindow"] .top-bar .action-item:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 自定义窗口操作 - 悬浮胶囊 */
+body[window-name="FileCenterWindow"] .window-control-area {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  background-color: transparent !important;
+  margin-right: 2px !important;
+  margin-top: -1px !important;
+}
+/* 3 个操作按钮 */
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn {
+  position: relative !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 99px !important;
+  background-image: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--text_primary) !important;
+  transition: background-color 0.2s ease !important;
+}
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn
+  .q-svg-icon,
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:hover
+  .q-svg-icon {
+  display: none !important;
+}
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: currentColor;
+}
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn.close:hover {
+  background-color: rgba(224, 66, 66, 0.6) !important;
+}
+/* 最小化 */
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(3)::before,
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(3):hover::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 13H5a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 13H5a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+/* 最大化 */
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(4)::before,
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(4):hover::before {
+  width: 14px !important;
+  height: 14px !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+/* 关闭 */
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(5)::before,
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(5):hover::before {
+  width: 20px !important;
+  height: 19px !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z'/%3E%3C/svg%3E")
+    no-repeat center / contain !important;
+}
+body[window-name="FileCenterWindow"]
+  .window-control-area
+  .window-control-area__btn:nth-child(5):hover::before {
+  background-color: #ffffff !important;
+}
+body[window-name="FileCenterWindow"] .draggable-view__container {
+  height: 52px;
+}
+body[window-name="FileCenterWindow"] #fileTableDragRoot {
+  padding: 10px;
+  padding-bottom: 0;
+}
+body[window-name="FileCenterWindow"] .list-item.sticky {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}body[window-name="FileCenterWindow"] .list-item.sticky:first-of-type {
+  margin-top: 0;
+}
+/* 内容区 - 悬浮玻璃卡片 */
+body[window-name="FileCenterWindow"] .content-wrapper {
+  margin: 10px !important;
+  margin-top: 6px !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+}
+/* 左侧导航透明 */
+body[window-name="FileCenterWindow"] .nav-bar-wrapper {
+  background: transparent !important;
+}
+body[window-name="FileCenterWindow"] .navigation-bar {
+  background: transparent !important;
+  border: none !important;
+}
+body[window-name="FileCenterWindow"] .nav-items-container {
+  padding: 6px !important;
+}
+body[window-name="FileCenterWindow"] .nav-item {
+  border-radius: 10px !important;
+}
+body[window-name="FileCenterWindow"] .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+body[window-name="FileCenterWindow"] .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+}
+body[window-name="FileCenterWindow"] .nav-separator {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+body[window-name="FileCenterWindow"] .sub-nav-item {
+  border-radius: 8px !important;
+}
+/* 主内容区透明 */
+body[window-name="FileCenterWindow"] .main-content {
+  background: transparent !important;
+}
+body[window-name="FileCenterWindow"] .new-file-wrapper .header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 暗色主题适配 */
+body[q-theme="dark"][window-name="FileCenterWindow"] .top-bar,
+body[q-theme="dark"][window-name="FileCenterWindow"] .content-wrapper {
+  background-color: rgba(22, 24, 28, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="FileCenterWindow"] .window-control-area {
+  background-color: rgba(22, 24, 28, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="FileCenterWindow"] .q-search__input {
+  background-color: rgba(22, 24, 28, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="FileCenterWindow"] .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+body[q-theme="dark"][window-name="FileCenterWindow"] .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+}
+body[q-theme="dark"][window-name="FileCenterWindow"] .nav-separator {
+  background: rgba(255, 255, 255, 0.08) !important;
 }
