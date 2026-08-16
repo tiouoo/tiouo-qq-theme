@@ -15,9 +15,9 @@ body[window-name="MainWindow"] .container-content {
   margin-top: 0 !important;
 }
 body[window-name="MainWindow"] .window-control-area {
-  margin-top: 11px;
-  margin-right: 11px;
-  column-gap: 1px;
+  margin-top: 8px;
+  margin-right: 10px;
+  column-gap: 4px;
 }
 body[window-name="MainWindow"] .window-control-area__btn {
   border-radius: 13px !important;
@@ -51,6 +51,11 @@ body[window-name="MainWindow"]
   width: 16px !important;
   height: 16px !important;
   background-color: currentColor;
+}
+body[window-name="MainWindow"]
+  .window-control-area__btn {
+    height: 28px !important;
+    width: 32px !important;
 }
 
 /* 标题栏 - SettingWindow */
@@ -606,7 +611,7 @@ body#login .remove-icon {
   display: none !important;
 }
 .qq-logo {
-  margin-left: 12px;
+  margin-left: 10px;
 }
 .qq-logo.topbar-logo {
   display: inline-flex !important;
@@ -641,6 +646,9 @@ body#login .remove-icon {
     0 4px 16px rgba(31, 35, 40, 0.06); */
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.topbar-content{
+  height: 34px !important;
 }
 .topbar {
   margin: 10px;
@@ -1546,4 +1554,21 @@ body[q-theme="dark"][window-name="CollectionWindow"]
 }
 body[q-theme="dark"][window-name="CollectionWindow"] .favorites-item:hover {
   background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+[window-name="SettingWindow"] .setting-tab,
+[window-name="SettingWindow"] .setting-main{
+  background: transparent !important;
+}
+
+.more-panel>.side-panel{
+  background: transparent !important;
+}
+.more-panel>.side-panel>.panel-content{
+  margin-bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 14px !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
 }
