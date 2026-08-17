@@ -891,7 +891,7 @@ body#login .remove-icon {
   padding: 0 !important;
   margin-top: -10px;
 }
-#ml-root .virtual-scroll-area {
+#ml-root .ml-list .ml-item:last-child {
   margin-bottom: var(--chat-input-area-height, 150px);
 }
 #ml-root .virtual-scroll-area .full-screen {
@@ -2012,4 +2012,7 @@ body[q-theme="dark"][window-name="BackupRecoveryWindow"] .window-control-area {
 }
 [window-name="BackupRecoveryWindow"] .title {
   margin-left: 12px !important;
+}
+.icon-item[aria-label="发起群聊"]{
+  margin-top: 3px !important;
 }
